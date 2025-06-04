@@ -12,7 +12,7 @@ Referências:
 ### Clonar o projeto
     
     git clone https://github.com/fahadkalil/MathParser.git
-    cd face_detection_app
+    cd MathParser
 
 ### Criar e ativar o virtualenv para o projeto
 
