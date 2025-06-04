@@ -1,3 +1,9 @@
+# MathParser
+
+#### Analisador léxico e sintático simples usando biblioteca [Sly](https://sly.readthedocs.io/en/latest/sly.html)
+
+---
+
 ## Instalação
 
 ### Clonar o projeto
