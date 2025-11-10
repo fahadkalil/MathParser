@@ -16,10 +16,13 @@ class MyLexer(Lexer):
     ID['falso'] = FALSO
     ID['vdd'] = VDD
     
-    @_(r'\d+')
+    @_(r'0x[0-9a-fA-F]+', r'\d+')
     def NUMBER(self, t):
-        t.value = int(t.value)
-        return t    
+        if t.value.startswith('0x'):
+            t.value = int(t.value[2:], 16) # converte string com hexadecimal para inteiro
+        else:
+            t.value = int(t.value) # converte string para inteiro
+        return t   
 
     @_(r'\n+')
     def newline(self, t):
